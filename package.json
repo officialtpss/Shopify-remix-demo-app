@@ -1,5 +1,5 @@
 {
-  "name": "pulseem",
+  "name": "remix-app",
   "private": true,
   "scripts": {
     "build": "remix vite:build",

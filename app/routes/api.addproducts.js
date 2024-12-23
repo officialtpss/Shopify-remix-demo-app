@@ -106,9 +106,9 @@ export const action = async ({ request }) => {
                     const response = await axios(config);
                     if (response) {
                         const chunk = allProducts.splice(0, 40);
-                        console.log('Products imported to pulseem')
+                        
                     } else {
-                        console.log('Error products imported to pulseem')
+                       
                     }
                 }
 
