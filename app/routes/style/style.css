@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(45deg, #ff0076, #ff0054);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff0076;
+}
+.Polaris-Checkbox__Input{
+  accent-color: #ff0076;
+}
+.Polaris-Page .Polaris-Page__Content .Polaris-Checkbox .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop{
+      box-shadow: inset 0 0 0 var(--p-space-800) #ff0054;
+  }
+.Polaris-BlockStack .Polaris-Checkbox .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop{
+  box-shadow: inset 0 0 0 var(--p-space-800) #ff0054;
+}
+span.Polaris-Tag.Polaris-Tag--sizeLarge {
+  background: #ff007614;
+}
+.heading-text{
+  font-size: 15px;
+  font-family: 'Sen';
+}
+.Polaris-Tag--sizeLarge:hover .Polaris-Tag--overlay{
+  background: none;
+}
+.custom-button button{
+    background: linear-gradient(45deg, #ff0076, #ff0054, #ff4d2a);
+    color: #fff;
+    border-color: #ff0076;
+    box-shadow: none;
+    opacity: 0.9;
+}
+.custom-button button:hover {
+    background: linear-gradient(45deg, #ff0076, #ff0054, #ff4d2a);
+    color: #fff;
+    border-color: #ff0076;
+    box-shadow: none;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.custom-button svg.Polaris-Icon__Svg {
+    fill: #fff;
+}
+.slider.round {
+  border-radius: 34px;
+}
+a.Polaris-Link.Polaris-Link--removeUnderline {
+    color: #ff0054;
+}
+.custom-checkbox span.Polaris-Choice__Label span {
+    font-size: 15px;
+     font-family: 'Sen'
+}
+body,p,span,h1,h2,h3,h6{
+font-family: 'Sen'
+}
+.custom-button:hover svg.Polaris-Icon__Svg {
+    fill: #fff;
+}
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Session {
+  id            String    @id
+  shop          String
+  state         String
+  isOnline      Boolean   @default(false)
+  scope         String?
+  expires       DateTime?
+  accessToken   String
+  userId        BigInt?
+  firstName     String?
+  lastName      String?
+  email         String?
+  accountOwner  Boolean   @default(false)
+  locale        String?
+  collaborator  Boolean?  @default(false)
+  emailVerified Boolean?  @default(false)
+}
+
+model ShopInfo {
+  id                 Int     @id @default(autoincrement())
+  shop               String
+  shopId             String?
+  apiKey             String
+  productSync        Int? @default(0)
+  newSignup          Int?
+  cartAbandonment    Int?
+  purchase           Int?
+  signupGroup        String?
+  cartGroup          String?
+  purchaseGroup      String?
+  productAutosync    Int? @default(0)
+  webpixel           Int? @default(0)
+  webpixel_id        String?
+}
+
+model ShopCustomers {
+  id                 Int     @id @default(autoincrement())
+  shop               String
+  customerId         String?
+  customerEmail      String?
+  customerPhone      String?
+}
+
+
+model AbandonmentCart {
+  id                 Int     @id @default(autoincrement())
+  shop               String
+  customerEmail      String?
+  customerName       String?
+  customerPhone      String?
+  cartToken          String?
+  checkoutId         String?
+  customerId         String?
+  createdAt          String?
+  status             DateTime?
+}
